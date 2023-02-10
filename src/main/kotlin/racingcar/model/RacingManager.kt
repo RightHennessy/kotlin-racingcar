@@ -28,10 +28,8 @@ class RacingManager {
 
     fun attempt(): String {
         carManager.attempt()
-        return makeAttemptLog()
+        return carManager.makeAttemptLog()
     }
-
-    fun makeAttemptLog() = carManager.toString()
 
     fun step(index: Int, number: Int) {
         carManager.step(index, number)
