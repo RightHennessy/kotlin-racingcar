@@ -19,7 +19,7 @@ class CarManagerTest {
         carManager.step(2, 6)
 
         val winners = carManager.determineWinner()
-        Assertions.assertThat(winners[0].getName()).isEqualTo(Name("test3"))
+        Assertions.assertThat(winners.first().name).isEqualTo(Name("test3"))
     }
 
     @Test

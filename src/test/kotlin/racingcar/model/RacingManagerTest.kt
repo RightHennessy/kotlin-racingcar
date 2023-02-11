@@ -43,7 +43,7 @@ class RacingManagerTest {
         racingManager.step(0, 2)
         racingManager.step(1, 7)
 
-        assertThat(racingManager.makeAttemptLog()).isEqualTo("test1 : \ntest2 : -")
+        assertThat(racingManager.run()).isEqualTo("test1 : \ntest2 : -")
     }
 
     @Test
@@ -56,12 +56,12 @@ class RacingManagerTest {
         racingManager.step(0, 2)
         racingManager.step(1, 7)
 
-        result.add(racingManager.makeAttemptLog())
+        result.add(racingManager.run())
 
         racingManager.step(0, 9)
         racingManager.step(1, 5)
 
-        result.add(racingManager.makeAttemptLog())
+        result.add(racingManager.run())
 
         assertThat(racingManager.makeRunLog(result)).isEqualTo("test1 : \ntest2 : -\n\ntest1 : -\ntest2 : --")
     }
